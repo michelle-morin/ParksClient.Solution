@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "HOME PAGE";
+}
+
+<h1>Welcome to the Park Finder</h1>
+<hr/>
+<div class="two-buttons">
+	@Html.ActionLink("VIEW PARKS", "Index", "Parks", null, new { @class="btn" }) 
+	@Html.ActionLink("LOGIN/REGISTER", "Index", "Account", null, new { @class="btn" })
+</div>
