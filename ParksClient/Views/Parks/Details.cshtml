@@ -17,8 +17,8 @@
   <li>GOVERNING AGENCY: @Model.Agency</li>
   <li>STATE: @Model.State</li>
   <li>@campsiteValue</li>
+  <li>@Model.Description</li>
 </ul>
-<p>@Model.Description</p>
 
 <div class="three-buttons">
   @Html.ActionLink("EDIT PARK INFO", "Edit", "Parks", new { id = Model.ParkId}, new { @class="btn" })

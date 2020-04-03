@@ -4,6 +4,7 @@
 
 <div class="row">
   <div class="col-md-6">
+    <br>
     <h1>SEARCH PARKS:</h1>
     <form action="/parks/search" method="get">
       <label for="name">Park name:</label>
@@ -13,22 +14,15 @@
       <label for="state">State:</label>
       <input id="state" name="state" type="text"><br>
       <label>Campsite availability:</label>
-      <div class="radio">
-        <label>
-          <input type="radio" for="campsites" name="campsites" value="true">
-          HAS CAMPSITES
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" for="campsites" name="campsites" value="false">
-          NO CAMPING
-        </label>
-      </div>
-      <button type="submit" class="btn">SEARCH</button>
+      <input type="radio" for="campsites" name="campsites" value="true">
+      <label class="float-right">HAS CAMPSITES</label>
+      <input type="radio" for="campsites" name="campsites" value="false">
+      <label class="float-right">NO CAMPING</label>
+      <button type="submit" class="btn-block">SEARCH</button>
     </form>
   </div>
   <div class="col-md-6">
+    <br>
     <h1>PARKS</h1>
     <ol id="parkList">
     @foreach (Park park in Model)
