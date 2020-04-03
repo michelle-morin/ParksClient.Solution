@@ -1,0 +1,22 @@
+@{
+  ViewData["Title"] = "LOG IN";
+}
+
+@using ParksClient.ViewModels
+@model LoginViewModel
+
+<h1>LOG IN TO YOUR ACCOUNT</h1>
+<hr />
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.UserName)
+  @Html.TextBoxFor(m => m.UserName)<br>
+
+  @Html.LabelFor(m => m.Password)
+  @Html.PasswordFor(m => m.Password)<br>
+
+  <input type="submit" value="LOG IN" class="btn" />
+}
+
+<h4>NEW USER?</h4>
+@Html.ActionLink("REGISTER", "Register", "Account", null, new { @class="btn" })

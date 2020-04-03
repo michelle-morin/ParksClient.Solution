@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "ACCOUNT";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+  <h1>Welcome, @User.Identity.Name!</h1>
+  @Html.ActionLink("VIEW PARKS", "Index", "Parks", null, new { @class="btn" })
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" class="btn" value="LOG OUT" />
+  }
+}
+else
+{
+  <div class="two-buttons">
+    @Html.ActionLink("REGISTER", "Register", "Account", null , new { @class="btn" })
+    @Html.ActionLink("LOG IN", "Login", "Account", null, new { @class="btn" })
+  </div>
+}
