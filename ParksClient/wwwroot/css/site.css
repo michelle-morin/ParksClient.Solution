@@ -149,7 +149,7 @@ select {
   height: 2.75em;
 }
 
-input, textarea {
+input {
   display: block;
   width: 100%;
   border: 1px solid #111111;
@@ -159,4 +159,8 @@ input, textarea {
   box-shadow: none;
   margin-bottom: 1%;
   padding: 1%;
+}
+
+input#description {
+  height: 6em;
 }
