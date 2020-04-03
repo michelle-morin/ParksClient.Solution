@@ -76,8 +76,6 @@ _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``git clone https://github.com/michelle-morin/ParksClient.Solution``
 * ``cd ParksClient.Solution/ParksClient``
 
-_Confirm that you have navigated to the ParksClient directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
-
 ## Clone the Parks Lookup API repository and run the Parks Lookup API
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
@@ -85,11 +83,13 @@ _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
 * ``git clone https://github.com/michelle-morin/ParksLookup.Solution``
 * ``cd ParksLookup.Solution/ParksLookup``
+* ``dotnet ef database update``
 * ``dotnet run`` or ``dotnet watch run``
 
 ## Run this MVC application in another Terminal or PowerShell window
 
 _Run this MVC application by entering the following command in Terminal (macOS) or PowerShell (Windows) at the root of the ParksClient directory:_
+* ``dotnet ef database update``
 * ``dotnet run`` or ``dotnet watch run``
 
 _To view/edit the source code of this application, open the contents of the ParksClient.Solution directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal at the root of the ParksClient.Solution directory)._
