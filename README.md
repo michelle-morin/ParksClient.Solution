@@ -16,7 +16,7 @@ _This MVC application interacts with a custom-built Parks Lookup API, allowing u
 | Application allows a registered user to login | registered user clicks "log in" option at '/Account' | application redirects to '/Account/Login' |
 | Application allows a registered user to logout | registered user clicks "logout" option at '/Account' | application logs out of user account |
 | Only registered, logged-in users are able to create, update, and delete parks | user is not logged in and/or not registered and clicks "add park", "edit park", or "delete park" | user redirected to login page |
-| If user visits '/Parks' route, the application displays all parks obtained from Parks Lookup API, ordered alphabetically by park name | user visits '/Park' | application displays sorted list of all parks |
+| If user visits '/Parks' route, the application displays all parks obtained from Parks Lookup API, ordered alphabetically by park name | user visits '/Parks' | application displays sorted list of all parks |
 | If a registered user clicks "add new park" link at '/Parks', the application redirects to a form ('/Parks/Create') for adding a new park | registered user clicks "add new park" | the application redirects to form at 'Parks/Create' |
 | When a registered user submits the new park form, the application creates the new park entry and redirects to '/Parks' | registered user submits new park form | the application adds new park to parks table and redirects to '/Reviews' |
 | A registered user can delete a park from the list of all parks | registered user selects "delete park" option | application deletes park from database |
