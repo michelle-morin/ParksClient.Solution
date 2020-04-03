@@ -83,6 +83,8 @@ _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
 * ``git clone https://github.com/michelle-morin/ParksLookup.Solution``
 * ``cd ParksLookup.Solution/ParksLookup``
+* ``dotnet restore``
+* ``dotnet build``
 * ``dotnet ef database update``
 * ``dotnet run`` or ``dotnet watch run``
 
