@@ -24,15 +24,11 @@
   <div class="col-md-6">
     <br>
     <h1>PARKS</h1>
-    <ol id="parkList">
     @foreach (Park park in Model)
     {
-      <ul>
-        <li><a href="/parks/details/@(park.ParkId)">@park.Name</a></li>
-      </ul>
+      <p><a href="/parks/details/@(park.ParkId)">@park.Name</a></p>
       <br>
     }
-    </ol>
     @Html.ActionLink("ADD NEW PARK", "Create", "Parks", null, new { @class="btn-block" })
   </div>
 </div>
