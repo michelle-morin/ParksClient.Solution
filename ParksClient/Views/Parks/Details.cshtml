@@ -1,0 +1,27 @@
+@{
+  ViewData["Title"] = "PARK INFO";
+  string campsiteValue = "";
+  @if (Model.Campsites == true)
+  {
+    campsiteValue = "INCLUDES CAMPSITES";
+  }
+  else
+  {
+    campsiteValue = "NO CAMPING";
+  }
+}
+
+<h1>@Model.Name</h1>
+<hr/>
+<ul>
+  <li>GOVERNING AGENCY: @Model.Agency</li>
+  <li>STATE: @Model.State</li>
+  <li>@campsiteValue</li>
+</ul>
+<p>@Model.Description</p>
+
+<div class="three-buttons">
+  @Html.ActionLink("EDIT PARK INFO", "Edit", "Parks", new { id = Model.ParkId}, new { @class="btn" })
+  @Html.ActionLink("DELETE PARK", "Delete", "Parks", new { id = Model.ParkId}, new { @class="btn" })<br>
+  @Html.ActionLink("RETURN TO PARKS", "Index", "Parks", null, new { @class="btn" })
+</div>

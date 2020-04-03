@@ -1,0 +1,35 @@
+@{
+  ViewData["Title"] = "NEW PARK";
+}
+
+<h1>ADD A PARK</h1>
+<hr/>
+<form action="/parks/create" method="post">
+  <label for="name">Park name:</label>
+  <input id="name" name="name" type="text">
+  <br>
+  <label for="agency">Governing agency:</label>
+  <input id="agency" name="agency" type="text">
+  <br>
+  <label for="state">State:</label>
+  <input id="state" name="state" type="number">
+  <br>
+  <label for="description">Description:</label>
+  <input id="description" name="description" type="text">
+  <br>
+  <label>Does this park have campsites?</label>
+  <div class="radio">
+    <label>
+      <input type="radio" for="campsites" name="campsites" value="true" checked>
+      YES
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" for="campsites" name="campsites" value="false">
+      NO
+    </label>
+  </div>
+  <br>
+  <button type="submit" class="btn-block">ADD PARK</button>
+</form>

@@ -1,0 +1,44 @@
+@{
+  ViewData["Title"] = "PARKS";
+}
+
+<div class="row">
+  <div class="col-md-6">
+    <h1>SEARCH PARKS:</h1>
+    <form action="/parks/search" method="get">
+      <label for="name">Park name:</label>
+      <input id="name" name="name" type="text"><br>
+      <label for="agency">Governing agency:</label>
+      <input id="agency" name="agency" type="text"><br>
+      <label for="state">State:</label>
+      <input id="state" name="state" type="text"><br>
+      <label>Campsite availability:</label>
+      <div class="radio">
+        <label>
+          <input type="radio" for="campsites" name="campsites" value="true">
+          HAS CAMPSITES
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" for="campsites" name="campsites" value="false">
+          NO CAMPING
+        </label>
+      </div>
+      <button type="submit" class="btn">SEARCH</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h1>PARKS</h1>
+    <ol id="parkList">
+    @foreach (Park park in Model)
+    {
+      <ul>
+        <li><a href="/parks/details/@(park.ParkId)">@park.Name</a></li>
+      </ul>
+      <br>
+    }
+    </ol>
+    @Html.ActionLink("ADD NEW PARK", "Create", "Parks", null, new { @class="btn-block" })
+  </div>
+</div>

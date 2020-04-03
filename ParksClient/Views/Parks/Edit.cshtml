@@ -1,0 +1,37 @@
+@{
+  ViewData["Title"] = "EDIT PARK";
+}
+
+<h1>EDIT PARK DETAILS</h1>
+<hr/>
+<form action="/parks/details/@(Model.ParkId)" method="post">
+  <label for="name">Park name:</label>
+  <input id="name" name="name" value="@Model.Name" type="text">
+  <br>
+  <label for="agency">Governing agency:</label>
+  <input id="agency" name="agency" value="@Model.Agency" type="text">
+  <br>
+  <label for="state">State:</label>
+  <input id="state" name="state" value="@Model.State" type="number">
+  <br>
+  <label for="description">Description:</label>
+  <input id="description" name="description" value="@Model.Description" type="textarea">
+  <br>
+  <label>Does this park have campsites?</label>
+  <div class="radio">
+    <label>
+      <input type="radio" for="campsites" name="campsites" value="true">
+      YES
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" for="campsites" name="campsites" value="false">
+      NO
+    </label>
+  </div>
+  <br>
+  <button type="submit" class="btn-block">SAVE CHANGES</button>
+</form>
+
+  @Html.ActionLink("RETURN TO DETAILS", "Details", "Parks", new { id = Model.ParkId}, new { @class="btn-block" })
