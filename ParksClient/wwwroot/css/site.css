@@ -43,10 +43,25 @@ body {
   margin-bottom: 60px;
   font-family: 'Montserrat', sans-serif;
   color: #111111;
+  background-image: url("/img/plants.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
 }
 
 .footer {
-  position: absolute;
+  background-color: #f5f5f5;
+  position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -55,10 +70,15 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+main {
+  background-color: #f5f5f5b4;
+  padding: 2%;
+  border-radius: 10px;
+}
+
 .render-body {
-  background-color: transparent;
-  border-radius: 50%;
-  padding: 1%;
+  padding: 2%;
+  z-index: 1;
 }
 
 h4 {
@@ -70,9 +90,9 @@ h1 {
   text-align: center;
   font-size: 3em;
   font-weight: bolder;
-  color: #f5f5f5;
-  -webkit-text-stroke-width: 0.75px;
-  -webkit-text-stroke-color: #36454f;
+  color: #c7e78c;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #111111;
 }
 
 .btn {
@@ -126,16 +146,23 @@ h1 {
 p {
   text-align: center;
   font-size: medium;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
-li a {
+p {
+  list-style-type: none;
+  text-align: center;
+}
+
+p a {
   font-weight: bolder;
   color: #111111;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #111111;
 }
 
-li a:hover {
+p a:hover {
   -webkit-text-stroke-color: rgb(192, 65, 179);
   text-decoration: none;
 }
