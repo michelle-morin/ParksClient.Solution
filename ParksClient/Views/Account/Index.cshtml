@@ -5,10 +5,10 @@
 @if (User.Identity.IsAuthenticated)
 {
   <h1>Welcome, @User.Identity.Name!</h1>
-  @Html.ActionLink("VIEW PARKS", "Index", "Parks", null, new { @class="btn" })
+  @Html.ActionLink("VIEW PARKS", "Index", "Parks", null, new { @class="btn-block" })
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn" value="LOG OUT" />
+    <input type="submit" class="btn-block" value="LOG OUT" />
   }
 }
 else

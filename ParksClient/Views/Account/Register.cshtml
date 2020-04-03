@@ -18,8 +18,8 @@
   @Html.LabelFor(user=> user.ConfirmPassword)
   @Html.PasswordFor(user=> user.ConfirmPassword)<br>
 
-  <input class="btn" type="submit" value="REGISTER" />
+  <input class="btn-block" type="submit" value="REGISTER" />
 }
-
+<br>
 <h4>ALREADY HAVE AN ACCOUNT?</h4>
-@Html.ActionLink("LOG IN", "Login", "Account", null, new { @class="btn" })
+@Html.ActionLink("LOG IN", "Login", "Account", null, new { @class="btn-block" })
